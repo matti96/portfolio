@@ -1,6 +1,18 @@
-#project-grid {
-    background-color: black;
+header {
+    height: 100px;
+    background-color: #444;
+}
+
+#main-content {
     display: flex;
+    justify-content: center;
+
+    margin-top: 200px;
+}
+
+#project-grid {
+    display: flex;
+    gap: 5px;
 }
 
 .project-tile {
