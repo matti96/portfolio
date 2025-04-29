@@ -1,3 +1,7 @@
+* {
+    margin: 0px;
+}
+
 header {
     height: 100px;
     background-color: #444;
@@ -28,5 +32,5 @@ header {
 
 .project-tile img {
     height: 200px;
-    border-radius: 10px;
+    border-radius: 7px;
 }
