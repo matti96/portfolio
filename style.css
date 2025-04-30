@@ -11,12 +11,13 @@ header {
 #main-content {
     display: flex;
     justify-content: center;
-
-    margin-top: 200px;
+    padding: 100px;
 }
 
 #project-grid {
+    background-color: red;
     display: flex;
+    flex-wrap: wrap;
     gap: 5px;
 }
 
