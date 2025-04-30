@@ -35,4 +35,5 @@ header {
 .project-tile img {
     height: 200px;
     border-radius: 7px;
+    cursor: pointer;
 }
