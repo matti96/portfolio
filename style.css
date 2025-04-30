@@ -22,10 +22,12 @@ header {
 }
 
 .project-tile {
-    background-color: grey;
+    background-color: #eee;
     padding: 5px;
     border-radius: 10px;
     display: flex;
+    max-width: 400px;
+    transition: width 100ms ease-in-out;
 }
 
 .info-container {
