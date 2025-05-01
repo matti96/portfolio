@@ -21,15 +21,19 @@ function turnAllInvisible(objList) {
     })
 }
 
+function turnVisible(obj) {
+    let info = obj.querySelector(".info-container");
+    info.style.display = "inline";
+    obj.style.width = tileExpand;
+}
+
 function toggleInfoVisibility(obj) {
     let info = obj.querySelector(".info-container");
 
     if(info.style.display == "none") {
         turnAllInvisible(tiles);
-        info.style.display = "inline";
-        obj.style.width = tileExpand;
+        turnVisible(obj);
     } else {
-        info.style.display = "none";
-        obj.style.width = tileCollapse;
+        //turnAllInvisible(tiles);
     }
 }
