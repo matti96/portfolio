@@ -17,10 +17,11 @@ header {
 }
 
 .project-row {
-    background-color: red;
     display: flex;
-    flex-wrap: wrap;
+    
+    
     gap: 5px;
+    margin-top: 5px;
 }
 
 .project-tile {
@@ -41,4 +42,5 @@ header {
     height: 200px;
     border-radius: 7px;
     cursor: pointer;
+    -webkit-user-drag: none;
 }
