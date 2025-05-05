@@ -29,6 +29,8 @@ header {
     padding: 5px;
     border-radius: 10px;
     display: flex;
+
+    width: 200px;
     max-width: 400px;
     max-height: 200px;
     transition: width 100ms ease-in-out;

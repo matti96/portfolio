@@ -34,6 +34,6 @@ function toggleInfoVisibility(obj) {
         turnAllInvisible(tiles);
         turnVisible(obj);
     } else {
-        //turnAllInvisible(tiles);
+        turnAllInvisible(tiles);
     }
 }
