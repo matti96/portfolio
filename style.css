@@ -36,8 +36,33 @@ header {
     transition: width 100ms ease-in-out;
 }
 
+.media-frame {
+    
+    height: 200px;
+    width: auto;
+    overflow: hidden;
+}
+
+.media-strip {
+    display: flex;
+    position: relative;
+    right: 0%;
+}
+
 .info-container {
     padding: 20px;
+}
+
+.info-content {
+    display: flex;
+}
+
+.close-info {
+    cursor: pointer;
+}
+
+.close-info:hover {
+    color: red;
 }
 
 .project-tile img {
