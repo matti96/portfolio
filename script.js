@@ -13,7 +13,17 @@ tiles.forEach(function(tile) {
 })
 
 
+let closeButtons = document.querySelectorAll(".close-info");
+closeButtons.forEach(function(btn) {
+    btn.addEventListener('click', function(btn){
+        btn.stopPropagation();
+        turnAllInvisible(tiles);
+    })
+})
+
+
 function turnAllInvisible(objList) {
+    console.log("wtf")
     objList.forEach(function(obj) {
         let info = obj.querySelector(".info-container");
         info.style.display = "none";
