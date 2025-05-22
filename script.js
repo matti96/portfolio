@@ -24,3 +24,13 @@ const displayHandler = (function(){
 
     return { show };
 })();
+
+function setCarouselPosition(pos) {
+    let imgs = document.querySelectorAll(".focus-project img");
+    let offset = pos * 300 + "px";
+
+    imgs.forEach(function(pic){
+        pic.style.right = offset;
+        console.log(pic.style.right);
+    });
+}
