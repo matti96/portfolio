@@ -1,11 +1,24 @@
 const tileHandler = (function(){
 
+    const highlight = "3px solid #f88";
+    const noHighlight = "3px solid #eee";
+
     const tiles = document.querySelectorAll(".project-tile");
     tiles.forEach(function(tile, index){
         tile.addEventListener('click', function(){
             displayHandler.show(index + ": " + tile);
+            highlightTile(index);
         });
     });
+
+    function highlightTile(tileNumber) {
+        tiles.forEach(function(tile){
+            let img = tile.querySelector("img");
+            img.style.border = noHighlight;
+        });
+        let img = tiles[tileNumber].querySelector("img");
+        img.style.border = highlight;
+    }
 
     function saySomething() {
         console.log("something");
