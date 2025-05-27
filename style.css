@@ -25,6 +25,18 @@
     box-sizing: border-box;
     padding: 20px;
     margin-bottom: 20px;
+
+    position: absolute;
+    opacity: 50%;
+    z-index: -1;
+
+    transition: opacity 100ms;
+}
+
+.default-project {
+    position: relative;
+    opacity: 100%;
+    z-index: 1;
 }
 
 .project-media {
@@ -43,10 +55,6 @@
 
     position: relative;
     right: 0px;
-}
-
-.project-text {
-    
 }
 
 #project-collection {
@@ -69,4 +77,6 @@
     border-radius: 2px;
     border: 3px solid #eee;
     cursor: pointer;
+
+    transition: border 200ms;
 }
