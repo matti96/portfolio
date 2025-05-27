@@ -11,6 +11,7 @@ const tileHandler = (function(){
 
         tile.addEventListener('click', function(){
             highlightTile(index);
+            focusHandler.setVisible(index);
         });
     });
 
@@ -31,9 +32,17 @@ const tileHandler = (function(){
     return { saySomething };
 })();
 
+const focusHandler = (function(){
 
+    const cards = document.querySelectorAll(".focus-project");
+    function setVisible(cardNumber) {
+        cards.forEach(function(card){
+            card.style.opacity = "0%";
+        });
+        cards[cardNumber].style.opacity = "100%";
     }
 
+    return { setVisible };
 })();
 
 function setCarouselPosition(pos) {
