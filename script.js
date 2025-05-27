@@ -19,7 +19,8 @@ const displayHandler = (function(){
 
     const display = document.querySelector("#display");
     function show(content){
-        display.innerText = "" + content;
+        //display.innerText = "" + content;
+        console.log("content");
     }
 
     return { show };
