@@ -8,9 +8,8 @@ const tileHandler = (function(){
 
         let img = tile.querySelector("img");
         img.draggable = false;
-        
+
         tile.addEventListener('click', function(){
-            displayHandler.show(index + ": " + tile);
             highlightTile(index);
         });
     });
@@ -32,15 +31,9 @@ const tileHandler = (function(){
     return { saySomething };
 })();
 
-const displayHandler = (function(){
 
-    const display = document.querySelector("#display");
-    function show(content){
-        //display.innerText = "" + content;
-        console.log("content");
     }
 
-    return { show };
 })();
 
 function setCarouselPosition(pos) {
