@@ -5,6 +5,10 @@ const tileHandler = (function(){
 
     const tiles = document.querySelectorAll(".project-tile");
     tiles.forEach(function(tile, index){
+
+        let img = tile.querySelector("img");
+        img.draggable = false;
+        
         tile.addEventListener('click', function(){
             displayHandler.show(index + ": " + tile);
             highlightTile(index);
