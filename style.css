@@ -20,7 +20,7 @@
     display: flex;
     gap: 20px;
 
-    border-radius: 20px;
+    border-radius: 2px;
 
     box-sizing: border-box;
     padding: 20px;
@@ -39,7 +39,7 @@
     width: var(--imgSize);
     height: var(--imgSize);
 
-    border-radius: 15px;
+    border-radius: 2px;
 
     position: relative;
     right: 0px;
@@ -66,6 +66,7 @@
 }
 
 .project-tile img {
-    border-radius: 20px;
-    border: 8px solid #eee;
+    border-radius: 2px;
+    border: 3px solid #eee;
+    cursor: pointer;
 }
