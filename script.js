@@ -24,12 +24,9 @@ const tileHandler = (function(){
         img.style.border = highlight;
     }
 
-    function saySomething() {
-        console.log("something");
-        return 1;
-    }
+    
 
-    return { saySomething };
+    return {  };
 })();
 
 const focusHandler = (function(){
