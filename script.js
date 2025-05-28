@@ -24,8 +24,6 @@ const tileHandler = (function(){
         img.style.border = highlight;
     }
 
-    
-
     return {  };
 })();
 
@@ -42,7 +40,9 @@ const focusHandler = (function(){
     return { setVisible };
 })();
 
-function setCarouselPosition(pos) {
+const carouselHandler = (function(){
+
+    function setPosition(pos) {
     let imgs = document.querySelectorAll(".focus-project img");
     let offset = pos * 300 + "px";
 
@@ -50,4 +50,7 @@ function setCarouselPosition(pos) {
         pic.style.right = offset;
         console.log(pic.style.right);
     });
-}
+    }
+
+    return { setPosition };
+})();
