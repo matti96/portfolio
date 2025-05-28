@@ -42,6 +42,11 @@ const focusHandler = (function(){
 
 const carouselHandler = (function(){
 
+
+    function addDots(carousel){
+        
+    }
+
     function setPosition(pos) {
     let imgs = document.querySelectorAll(".focus-project img");
     let offset = pos * 300 + "px";
