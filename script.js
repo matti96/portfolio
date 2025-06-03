@@ -43,8 +43,14 @@ const focusHandler = (function(){
 const carouselHandler = (function(){
 
 
-    function addDots(carousel){
-        
+    function selectDot(carousel, number){
+        let dotGroups = document.querySelectorAll(".carousel-dots");
+        let dots = dotGroups[carousel].querySelectorAll(".dot");
+
+        dots.forEach(function(dot){
+            dot.classList.remove("dot-select");
+        });
+        dots[number].classList.add("dot-select");
     }
 
     function setPosition(pos) {
@@ -57,5 +63,5 @@ const carouselHandler = (function(){
     });
     }
 
-    return { setPosition };
+    return { setPosition, selectDot };
 })();
