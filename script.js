@@ -42,6 +42,10 @@ const focusHandler = (function(){
 
 const carouselHandler = (function(){
 
+    const buttonHandler = (function(){
+        const prevButtons = document.querySelectorAll(".carousel-previous");
+        const nextButtons = document.querySelectorAll(".carousel-next");
+    })();
 
     function selectDot(carousel, number){
         let dotGroups = document.querySelectorAll(".carousel-dots");
