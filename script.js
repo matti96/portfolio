@@ -42,9 +42,28 @@ const focusHandler = (function(){
 
 const carouselHandler = (function(){
 
+    
     const buttonHandler = (function(){
-        const prevButtons = document.querySelectorAll(".carousel-previous");
-        const nextButtons = document.querySelectorAll(".carousel-next");
+        const focusProjects = document.querySelectorAll(".focus-project");
+        
+        try{
+            focusProjects.forEach(function(project, index){
+                const prevButton = project.querySelector(".carousel-previous");
+                const nextButton = project.querySelector(".carousel-next");
+                console.log(prevButton);
+                console.log(nextButton);
+                prevButton.addEventListener('click',function(){
+                    console.log("previous button of " + index + " was clicked");
+                });
+                nextButton.addEventListener('click',function(){
+                    console.log("next button of " + index + " was clicked");
+                });
+            })
+        }
+        catch(err){
+            console.log(err);
+        }
+        
     })();
 
     function selectDot(carousel, number){
