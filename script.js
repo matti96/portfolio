@@ -58,13 +58,16 @@ const carouselHandler = (function(){
     }
 
     function setPosition(pos) {
-    let imgs = document.querySelectorAll(".focus-project img");
-    let offset = pos * 300 + "px";
+        let imgs = document.querySelectorAll(".focus-project img");
+        let offset = pos * 300 + "px";
 
-    imgs.forEach(function(pic){
-        pic.style.right = offset;
-        console.log(pic.style.right);
-    });
+        let initialPos = imgs[0].style.right;
+        console.log("Initial Position: " + initialPos);
+
+        imgs.forEach(function(pic){
+            pic.style.right = offset;
+            console.log("New Position: " + pic.style.right);
+        });
     }
 
     return { setPosition, selectDot };
