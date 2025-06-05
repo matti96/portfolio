@@ -79,12 +79,22 @@ const carouselHandler = (function(){
         dots[number].classList.add("dot-select");
     }
 
-    function setPosition(pos) {
-        let imgs = document.querySelectorAll(".project-media img");
-        let offset = pos * 300 + "px";
+    function getPosition(project) {
+        let projects = document.querySelectorAll(".focus-project");
+        let dots = projects[project].querySelectorAll(".dot");
+        let activeDot;
+        dots.forEach(function(dot, index){
+            if(dot.classList.contains("dot-select")) {
+                activeDot = index;
+            }
+        });
+        return activeDot;
+    }
 
-        let initialPos = imgs[0].style.right;
-        console.log("Initial Position: " + initialPos);
+    function setPosition(carousel, pos) {
+        let projects = document.querySelectorAll(".focus-project");
+        let imgs = projects[carousel].querySelectorAll(".project-media img");
+        let offset = pos * imgSize + "px";
 
         imgs.forEach(function(pic){
             pic.style.right = offset;
@@ -92,5 +102,5 @@ const carouselHandler = (function(){
         });
     }
 
-    return { setPosition, selectDot };
+    return { setPosition, selectDot, getPosition };
 })();
