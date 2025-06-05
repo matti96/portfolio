@@ -77,7 +77,7 @@ const carouselHandler = (function(){
     }
 
     function setPosition(pos) {
-        let imgs = document.querySelectorAll(".focus-project img");
+        let imgs = document.querySelectorAll(".project-media img");
         let offset = pos * 300 + "px";
 
         let initialPos = imgs[0].style.right;
