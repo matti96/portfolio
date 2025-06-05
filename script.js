@@ -32,9 +32,13 @@ const focusHandler = (function(){
     const cards = document.querySelectorAll(".focus-project");
     function setVisible(cardNumber) {
         cards.forEach(function(card){
-            card.style.opacity = "0%";
+            card.classList.remove("active-project");
+            card.classList.add("inactive-project");
+            
         });
-        cards[cardNumber].style.opacity = "100%";
+        cards[cardNumber].classList.remove("inactive-project");
+        cards[cardNumber].classList.add("active-project");
+        
     }
 
     return { setVisible };
@@ -50,8 +54,7 @@ const carouselHandler = (function(){
             focusProjects.forEach(function(project, index){
                 const prevButton = project.querySelector(".carousel-previous");
                 const nextButton = project.querySelector(".carousel-next");
-                console.log(prevButton);
-                console.log(nextButton);
+                console.log(focusProjects[index]);
                 prevButton.addEventListener('click',function(){
                     console.log("previous button of " + index + " was clicked");
                 });
