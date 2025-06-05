@@ -62,12 +62,16 @@ const carouselHandler = (function(){
             focusProjects.forEach(function(project, index){
                 const prevButton = project.querySelector(".carousel-previous");
                 const nextButton = project.querySelector(".carousel-next");
-                console.log(focusProjects[index]);
+                
                 prevButton.addEventListener('click',function(){
-                    console.log("previous button of " + index + " was clicked");
+                    let pos = getPosition(index);
+                    setPosition(index, pos-1);
+                    selectDot(index, pos-1);
                 });
                 nextButton.addEventListener('click',function(){
-                    console.log("next button of " + index + " was clicked");
+                    let pos = getPosition(index);
+                    setPosition(index, pos+1);
+                    selectDot(index, pos+1);
                 });
             })
         }
