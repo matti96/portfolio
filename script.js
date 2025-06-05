@@ -1,3 +1,11 @@
+/*
+const style = window.getComputedStyle(document.body);
+const imgSize = style.getPropertyValue('--imgSize');
+console.log(imgSize);
+*/
+const imgSize = 300;
+const tileSize = 146;
+
 const tileHandler = (function(){
 
     const highlight = "3px solid #f88";
