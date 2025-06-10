@@ -64,14 +64,10 @@ const carouselHandler = (function(){
                 const nextButton = project.querySelector(".carousel-next");
                 
                 prevButton.addEventListener('click',function(){
-                    let pos = getPosition(index);
-                    setPosition(index, pos-1);
-                    selectDot(index, pos-1);
+                    swipeLeft(index);
                 });
                 nextButton.addEventListener('click',function(){
-                    let pos = getPosition(index);
-                    setPosition(index, pos+1);
-                    selectDot(index, pos+1);
+                    swipeRight(index);
                 });
             })
         }
@@ -103,6 +99,12 @@ const carouselHandler = (function(){
         return activeDot;
     }
 
+    function getSlideCount(carouselIndex) {
+        let projects = document.querySelectorAll(".focus-project");
+        let dots = projects[carouselIndex].querySelectorAll(".dot");
+        return dots.length;
+    }
+
     function setPosition(carousel, pos) {
         let projects = document.querySelectorAll(".focus-project");
         let imgs = projects[carousel].querySelectorAll(".project-media img");
@@ -110,9 +112,32 @@ const carouselHandler = (function(){
 
         imgs.forEach(function(pic){
             pic.style.right = offset;
-            console.log("New Position: " + pic.style.right);
         });
     }
 
-    return { setPosition, selectDot, getPosition };
+    function swipeRight(carouselIndex) {
+        let slideCount = getSlideCount(carouselIndex);
+        let currentPos = getPosition(carouselIndex);
+        if(currentPos >= slideCount - 1) {
+            setPosition(carouselIndex, 0);
+            selectDot(carouselIndex, 0);
+        } else {
+            setPosition(carouselIndex, currentPos + 1);
+            selectDot(carouselIndex, currentPos + 1);
+        }
+    }
+
+    function swipeLeft(carouselIndex) {
+        let slideCount = getSlideCount(carouselIndex);
+        let currentPos = getPosition(carouselIndex);
+        if(currentPos <= 0) {
+            setPosition(carouselIndex, slideCount - 1);
+            selectDot(carouselIndex, slideCount - 1);
+        } else {
+            setPosition(carouselIndex, currentPos - 1);
+            selectDot(carouselIndex, currentPos - 1);
+        }
+    }
+
+    return { setPosition, selectDot, getPosition, getSlideCount, swipeRight };
 })();
