@@ -2,6 +2,7 @@
     --imgSize: 300px;
     --tileSize: 146px;
     --dotSize: 12px;
+    --selectColor: #f66;
 }
 
 * {
@@ -96,6 +97,7 @@
 
 .dot-select {
     background-color: #555;
+    background-color: var(--selectColor);
 }
 
 .carousel-btn {
