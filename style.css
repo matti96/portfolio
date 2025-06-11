@@ -59,11 +59,11 @@
     display: flex;
 }
 
-.focus-project img {
+.project-media img, .project-media video{
     width: var(--imgSize);
     height: var(--imgSize);
+    object-fit: cover;
 
-    border-radius: 2px;
 
     position: relative;
     right: 0px;
