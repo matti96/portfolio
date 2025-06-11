@@ -8,9 +8,6 @@ const tileSize = 146;
 
 const tileHandler = (function(){
 
-    const highlight = "3px solid #f88";
-    const noHighlight = "3px solid #eee";
-
     const tiles = document.querySelectorAll(".project-tile");
     tiles.forEach(function(tile, index){
 
@@ -26,10 +23,10 @@ const tileHandler = (function(){
     function highlightTile(tileNumber) {
         tiles.forEach(function(tile){
             let img = tile.querySelector("img");
-            img.style.border = noHighlight;
+            img.id = "";
         });
         let img = tiles[tileNumber].querySelector("img");
-        img.style.border = highlight;
+        img.id = "tile-highlighted";
     }
 
     return {  };
