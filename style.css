@@ -53,6 +53,7 @@
 
 .project-media {
     width: var(--imgSize);
+    border-radius: 20px;
 
     flex-shrink: 0;
     overflow: hidden;
