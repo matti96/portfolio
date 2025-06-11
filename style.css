@@ -1,6 +1,7 @@
 :root {
     --imgSize: 300px;
     --tileSize: 146px;
+    --dotSize: 12px;
 }
 
 * {
@@ -79,8 +80,8 @@
 }
 
 .dot {
-    height: 10px;
-    width: 10px;
+    height: var(--dotSize);
+    width: var(--dotSize);
     margin: 0px;
     padding: 0px;
     background-color: #ccc;
