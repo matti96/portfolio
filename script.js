@@ -104,7 +104,7 @@ const carouselHandler = (function(){
 
     function setPosition(carousel, pos) {
         let projects = document.querySelectorAll(".focus-project");
-        let imgs = projects[carousel].querySelectorAll(".project-media img");
+        let imgs = projects[carousel].querySelectorAll(".project-media img, .project-media video");
         let offset = pos * imgSize + "px";
 
         imgs.forEach(function(pic){
