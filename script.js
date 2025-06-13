@@ -1,10 +1,15 @@
-/*
-const style = window.getComputedStyle(document.body);
-const imgSize = style.getPropertyValue('--imgSize');
-console.log(imgSize);
-*/
-const imgSize = 300;
-const tileSize = 146;
+const r = document.querySelector(':root');
+const cs = getComputedStyle(r);
+
+let contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
+let imgSize = contentWidth * 2 / 3;
+
+function updateCSSVariables(){
+        //cs = getComputedStyle(r);
+        contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
+        imgSize = contentWidth * 2 / 3;
+    }
+
 
 const tileHandler = (function(){
 
