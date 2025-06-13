@@ -55,7 +55,6 @@ const focusHandler = (function(){
 })();
 
 const carouselHandler = (function(){
-
     
     const buttonHandler = (function(){
         const focusProjects = document.querySelectorAll(".focus-project");
