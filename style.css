@@ -1,8 +1,13 @@
 :root {
-    --imgSize: 300px;
-    --tileSize: 146px;
+    
+    
     --dotSize: 12px;
     --selectColor: #f66;
+    --contentWidth: 400px;
+    --collectionGap: 5px;
+
+    --imgSize: calc(var(--contentWidth) * 2 / 3);
+    --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px);
 }
 
 * {
@@ -42,7 +47,7 @@ nav ul{
 .focus-project {
     position: absolute;
 
-    width: 600px;
+    width: var(--contentWidth);
     background-color: #eee;
     display: flex;
     gap: 20px;
@@ -157,10 +162,9 @@ nav ul{
 }
 
 #project-collection {
-    width: 600px;
-
+    width: var(--contentWidth);
     display: flex;
-    gap: 5px;
+    gap: var(--collectionGap);
     justify-content: left;
     flex-flow: wrap;
 }
