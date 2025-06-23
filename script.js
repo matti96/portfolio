@@ -1,15 +1,25 @@
-const r = document.querySelector(':root');
-const cs = getComputedStyle(r);
+    const r = document.querySelector(':root');
+    const cs = getComputedStyle(r);
 
-let contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
-let imgSize = contentWidth * 2 / 3;
+    let contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
+    let imgSize = contentWidth * 2 / 3;
 
-function updateCSSVariables(){
-        //cs = getComputedStyle(r);
-        contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
-        imgSize = contentWidth * 2 / 3;
+const scaleHandler = (function(){
+    
+
+    function resize() {
+        updateCSSVariables();
+        carouselHandler.refreshCarousels();
     }
 
+    function updateCSSVariables(){
+            contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
+            imgSize = contentWidth * 2 / 3;
+        }
+
+    return {resize, updateCSSVariables}
+
+})();
 
 const tileHandler = (function(){
 
