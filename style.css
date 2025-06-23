@@ -3,7 +3,7 @@
     
     --dotSize: 12px;
     --selectColor: #f66;
-    --contentWidth: 400px;
+    --contentWidth: 600px;
     --collectionGap: 5px;
 
     --imgSize: calc(var(--contentWidth) * 2 / 3);
