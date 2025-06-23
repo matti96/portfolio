@@ -78,36 +78,41 @@ const carouselHandler = (function(){
         
     })();
 
-    function selectDot(carousel, number){
-        let dotGroups = document.querySelectorAll(".carousel-dots");
-        let dots = dotGroups[carousel].querySelectorAll(".dot");
+    let carousels = new Array();
 
-        dots.forEach(function(dot){
-            dot.classList.remove("dot-select");
-        });
-        dots[number].classList.add("dot-select");
-    }
+    let dotSections = document.querySelectorAll(".carousel-dots");
 
-    function getPosition(project) {
-        let projects = document.querySelectorAll(".focus-project");
-        let dots = projects[project].querySelectorAll(".dot");
-        let activeDot;
-        dots.forEach(function(dot, index){
-            if(dot.classList.contains("dot-select")) {
-                activeDot = index;
-            }
-        });
-        return activeDot;
-    }
+    dotSections.forEach(function(dotSection, index){
+        let car = new Carousel(0, getSlideCount(index));
+        carousels.push(car);
+    });
 
-    function getSlideCount(carouselIndex) {
-        let projects = document.querySelectorAll(".focus-project");
-        let dots = projects[carouselIndex].querySelectorAll(".dot");
-        return dots.length;
+    function Carousel(pos, maxPos) {
+        this.currentPos = pos;
+        this.maximumPos = maxPos;
     }
 
     function setPosition(carousel, pos) {
-        updateCSSVariables();
+        carousels[carousel].currentPos = pos;
+    }
+
+    function getPosition(carousel) {
+        return carousels[carousel].currentPos;
+    }
+
+    function getMaximum(carousel) {
+        return carousels[carousel].maximumPos;
+    }
+
+    function refreshCarousels(){
+        carousels.forEach(function(car, index){
+            setOffset(index, car.currentPos);
+            selectDot(index, car.currentPos);
+        });
+    };
+
+    function setOffset(carousel, pos) {
+        scaleHandler.updateCSSVariables();
 
         let projects = document.querySelectorAll(".focus-project");
         let imgs = projects[carousel].querySelectorAll(".project-media img, .project-media video");
@@ -118,29 +123,45 @@ const carouselHandler = (function(){
         });
     }
 
+    function selectDot(carousel, number){
+        let dotGroups = document.querySelectorAll(".carousel-dots");
+        let dots = dotGroups[carousel].querySelectorAll(".dot");
+
+        dots.forEach(function(dot){
+            dot.classList.remove("dot-select");
+        });
+        dots[number].classList.add("dot-select");
+    }
+    
+    function getSlideCount(carouselIndex) {
+        let projects = document.querySelectorAll(".focus-project");
+        let dots = projects[carouselIndex].querySelectorAll(".dot");
+        return dots.length;
+    }
+       
     function swipeRight(carouselIndex) {
-        let slideCount = getSlideCount(carouselIndex);
-        let currentPos = getPosition(carouselIndex);
-        if(currentPos >= slideCount - 1) {
-            setPosition(carouselIndex, 0);
-            selectDot(carouselIndex, 0);
+        let current = getPosition(carouselIndex);
+        let max = getMaximum(carouselIndex);
+
+        if(current >= max - 1) {
+            setPosition(carouselIndex, 0)
         } else {
-            setPosition(carouselIndex, currentPos + 1);
-            selectDot(carouselIndex, currentPos + 1);
+            setPosition(carouselIndex, current += 1);
         }
+        refreshCarousels();
     }
 
     function swipeLeft(carouselIndex) {
-        let slideCount = getSlideCount(carouselIndex);
-        let currentPos = getPosition(carouselIndex);
-        if(currentPos <= 0) {
-            setPosition(carouselIndex, slideCount - 1);
-            selectDot(carouselIndex, slideCount - 1);
+        let current = getPosition(carouselIndex);
+        let max = getMaximum(carouselIndex);
+
+        if(current <= 0) {
+            setPosition(carouselIndex, max - 1);
         } else {
-            setPosition(carouselIndex, currentPos - 1);
-            selectDot(carouselIndex, currentPos - 1);
+            setPosition(carouselIndex, current -= 1);
         }
+        refreshCarousels();
     }
 
-    return { setPosition, selectDot, getPosition, getSlideCount, swipeRight };
+    return { refreshCarousels };
 })();
