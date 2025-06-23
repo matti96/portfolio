@@ -7,7 +7,7 @@
     --collectionGap: 5px;
 
     --imgSize: calc(var(--contentWidth) * 2 / 3);
-    --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px);
+    --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px); 
 }
 
 * {
