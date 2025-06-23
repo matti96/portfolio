@@ -217,8 +217,9 @@ footer {
     }
 
     :root {
-    --contentWidth: 400px;
-    --imgSize: calc(var(--contentWidth) * 4 / 5);
-    --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px);
+    --contentWidth: calc(100vw / 10 * 9);
+    --imgSize: calc(var(--contentWidth) * 9 / 10);
+    --tileSize: calc((var(--contentWidth) / 2) - var(--collectionGap) + 2px);
     }
+
 }
