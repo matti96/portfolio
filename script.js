@@ -1,25 +1,43 @@
-    const r = document.querySelector(':root');
-    const cs = getComputedStyle(r);
+    let contentWidth;
+    let imgSize;
+    let tileSize;
 
-    let contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
-    let imgSize = contentWidth * 2 / 3;
+    
 
 const scaleHandler = (function(){
     
-
     function resize() {
         updateCSSVariables();
         carouselHandler.refreshCarousels();
     }
 
     function updateCSSVariables(){
-            contentWidth = cs.getPropertyValue('--contentWidth').trim().substring(0,3);
-            imgSize = contentWidth * 2 / 3;
-        }
+        let contentEl = document.querySelector('.focus-project');
+        let contentCss = window.getComputedStyle(contentEl, null);
+        contentWidth = cleanValue(contentCss.getPropertyValue("width"));
+        console.log(contentWidth);
+
+        let mediaEl = document.querySelector('.project-media');
+        let mediaCss = window.getComputedStyle(mediaEl, null);
+        imgSize = cleanValue(mediaCss.getPropertyValue("width"));
+        console.log(imgSize);
+
+        let tileEl = document.querySelector('.project-tile');
+        let tileCss = window.getComputedStyle(tileEl, null);
+        tileSize = cleanValue(tileCss.getPropertyValue("width"));
+        console.log(tileSize);
+    }
+
+    function cleanValue(str){
+        str = str.replace("px",'');  
+        return str;
+    }
 
     return {resize, updateCSSVariables}
 
 })();
+
+scaleHandler.updateCSSVariables();
 
 const tileHandler = (function(){
 
