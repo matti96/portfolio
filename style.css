@@ -212,16 +212,32 @@ footer {
     z-index: 2;
 }
 
-@media screen and (max-width: 500px) {
-    .focus-project {
-        flex-direction: column;
-        align-items: center;
-    }
+
+
+@media screen and (orientation: portrait) {
 
     :root {
     --contentWidth: calc(100vw / 10 * 9);
     --imgSize: calc(var(--contentWidth) * 9 / 10);
     --tileSize: calc((var(--contentWidth) / 2) - var(--collectionGap) + 2px);
     }
+
+    .focus-project {
+        flex-direction: column;
+        align-items: center;
+
+        height: calc(var(--contentWidth) * 1.5);
+    }
+
+    .focus-project {
+        gap: 0px;
+    }
+
+    .project-text {
+        width: var(--imgSize);
+        box-sizing: border-box;
+        margin-top: 0;
+    }
+
 
 }
