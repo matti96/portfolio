@@ -166,6 +166,18 @@ nav ul{
     transform: rotate(180deg);
 }
 
+.project-text {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
 #project-collection {
     width: var(--contentWidth);
     display: flex;
