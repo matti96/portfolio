@@ -10,9 +10,14 @@
     --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px); 
 }
 
+@font-face {
+    font-family: kanit;
+    src: url(font/Kanit-Regular.ttf);
+}
+
 * {
     margin: 0px;
-    font-family: Calibri;
+    font-family: kanit;
 }
 
 nav {
