@@ -172,6 +172,7 @@ nav ul{
     gap: var(--collectionGap);
     justify-content: left;
     flex-flow: wrap;
+    margin-bottom: 50px;
 }
 
 .project-tile {
