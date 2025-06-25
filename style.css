@@ -5,6 +5,7 @@
     --bgColor: #ddd;
     --contentWidth: 900px;
     --collectionGap: 5px;
+    --fontSize: 12pt;
 
     --imgSize: calc(var(--contentWidth) * 2 / 3);
     --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px); 
@@ -18,6 +19,7 @@
 * {
     margin: 0px;
     font-family: kanit;
+    font-size: var(--fontSize);
 }
 
 nav {
@@ -225,6 +227,10 @@ footer {
     z-index: 2;
 }
 
+#copyright {
+    font-family: Calibri;
+}
+
 
 
 @media screen and (orientation: portrait) {
@@ -248,7 +254,6 @@ footer {
 
     .project-text {
         width: var(--imgSize);
-        box-sizing: border-box;
         margin-top: 0;
     }
 
