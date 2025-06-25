@@ -250,3 +250,29 @@ footer {
 
 
 }
+
+ /* width */
+::-webkit-scrollbar {
+  width: 30px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 15px;
+}
+
+.focus-project ::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eee;
+  
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--selectColor);
+} 
