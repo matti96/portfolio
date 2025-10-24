@@ -7,7 +7,7 @@
     --collectionGap: 5px;
     --fontSize: 12pt;
 
-    --imgSize: calc(var(--contentWidth) * 2 / 3);
+    --imgSize: calc(var(--contentWidth) * 3 / 7);
     --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px); 
 }
 
