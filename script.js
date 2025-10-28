@@ -4,8 +4,25 @@
 
     
 
-const scaleHandler = (function(){
-    
+const zoomHandler = (function () {
+    let media = document.querySelectorAll(".project-media > *");
+
+    media.forEach(function (image) {
+        image.addEventListener('click', function () {
+            zoomImage(image);
+        });
+    })
+
+    function zoomImage(image) {
+        let container = document.querySelector("#zoom-container");
+        container.textContent = '';
+        let copy = image.cloneNode(true);
+        container.appendChild(copy);
+    }
+})();
+
+const scaleHandler = (function () {
+
     function resize() {
         updateCSSVariables();
         carouselHandler.refreshCarousels();
