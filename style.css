@@ -57,7 +57,7 @@ nav ul{
     
     gap: 20px;
 
-    border-radius: 15px;
+    border-radius: 2px;
 
     box-sizing: border-box;
     padding: 20px;
@@ -87,7 +87,7 @@ nav ul{
 
 .project-media {
     width: var(--imgSize);
-    border-radius: 15px;
+    border-radius: 2px;
 
     flex-shrink: 0;
     overflow: hidden;
@@ -120,8 +120,8 @@ nav ul{
     margin: 0px;
     padding: 0px;
     background-color: var(--bgColor);
-    border-radius: 2px;
-    border: 2px solid #555;
+    border-radius: 1px;
+    border: 1px solid #555;
     box-sizing: border-box;
     display: inline-block;
 
@@ -173,7 +173,7 @@ nav ul{
     justify-content: left;
 
     background-color: white;
-    border-radius: 15px;
+    border-radius: 2px;
     padding: 15px;
     margin-bottom: 15px;
 
@@ -204,7 +204,7 @@ nav ul{
     width: var(--tileSize);
     height: var(--tileSize);
 
-    border-radius: 15px;
+    border-radius: 2px;
     border: 3px solid var(--bgColor);
     box-sizing: border-box;
     object-fit: cover;
@@ -268,11 +268,11 @@ footer {
 /* Track */
 ::-webkit-scrollbar-track {
   background: #fff;
-  border-radius: 15px;
+    border-radius: 2px;
 }
 
 .focus-project ::-webkit-scrollbar-thumb {
-    border-radius: 15px;
+    border-radius: 2px;
 }
 
 /* Handle */
