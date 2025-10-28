@@ -1,8 +1,7 @@
-    let contentWidth;
-    let imgSize;
-    let tileSize;
+let contentWidth;
+let imgSize;
+let tileSize;
 
-    
 
 const zoomHandler = (function () {
     let media = document.querySelectorAll(".project-media > *");
@@ -28,50 +27,50 @@ const scaleHandler = (function () {
         carouselHandler.refreshCarousels();
     }
 
-    function updateCSSVariables(){
+    function updateCSSVariables() {
         let contentEl = document.querySelector('.focus-project');
         let contentCss = window.getComputedStyle(contentEl, null);
         contentWidth = cleanValue(contentCss.getPropertyValue("width"));
-        console.log(contentWidth);
+        //console.log(contentWidth);
 
         let mediaEl = document.querySelector('.project-media');
         let mediaCss = window.getComputedStyle(mediaEl, null);
         imgSize = cleanValue(mediaCss.getPropertyValue("width"));
-        console.log(imgSize);
+        //console.log(imgSize);
 
         let tileEl = document.querySelector('.project-tile');
         let tileCss = window.getComputedStyle(tileEl, null);
         tileSize = cleanValue(tileCss.getPropertyValue("width"));
-        console.log(tileSize);
+        //console.log(tileSize);
     }
 
-    function cleanValue(str){
-        str = str.replace("px",'');  
+    function cleanValue(str) {
+        str = str.replace("px", '');
         return str;
     }
 
-    return {resize, updateCSSVariables}
+    return { resize, updateCSSVariables }
 
 })();
 
 scaleHandler.updateCSSVariables();
 
-const tileHandler = (function(){
+const tileHandler = (function () {
 
     const tiles = document.querySelectorAll(".project-tile");
-    tiles.forEach(function(tile, index){
+    tiles.forEach(function (tile, index) {
 
         let img = tile.querySelector("img");
         img.draggable = false;
 
-        tile.addEventListener('click', function(){
+        tile.addEventListener('click', function () {
             highlightTile(index);
             focusHandler.setVisible(index);
         });
     });
 
     function highlightTile(tileNumber) {
-        tiles.forEach(function(tile){
+        tiles.forEach(function (tile) {
             let img = tile.querySelector("img");
             img.id = "";
         });
@@ -79,55 +78,55 @@ const tileHandler = (function(){
         img.id = "tile-highlighted";
     }
 
-    return {  };
+    return {};
 })();
 
-const focusHandler = (function(){
+const focusHandler = (function () {
 
     const cards = document.querySelectorAll(".focus-project");
     function setVisible(cardNumber) {
-        cards.forEach(function(card){
+        cards.forEach(function (card) {
             card.classList.remove("active-project");
             card.classList.add("inactive-project");
-            
+
         });
         cards[cardNumber].classList.remove("inactive-project");
         cards[cardNumber].classList.add("active-project");
-        
+
     }
 
     return { setVisible };
 })();
 
-const carouselHandler = (function(){
-    
-    const buttonHandler = (function(){
+const carouselHandler = (function () {
+
+    const buttonHandler = (function () {
         const focusProjects = document.querySelectorAll(".focus-project");
-        
-        try{
-            focusProjects.forEach(function(project, index){
+
+        try {
+            focusProjects.forEach(function (project, index) {
                 const prevButton = project.querySelector(".carousel-previous");
                 const nextButton = project.querySelector(".carousel-next");
-                
-                prevButton.addEventListener('click',function(){
+
+                prevButton.addEventListener('click', function () {
                     swipeLeft(index);
                 });
-                nextButton.addEventListener('click',function(){
+                nextButton.addEventListener('click', function () {
                     swipeRight(index);
                 });
             })
         }
-        catch(err){
+        catch (err) {
             console.log(err);
         }
-        
+
     })();
 
     let carousels = new Array();
 
     let dotSections = document.querySelectorAll(".carousel-dots");
 
-    dotSections.forEach(function(dotSection, index){
+    dotSections.forEach(function (dotSection, index) {
         let car = new Carousel(0, getSlideCount(index));
         carousels.push(car);
     });
@@ -149,8 +148,8 @@ const carouselHandler = (function(){
         return carousels[carousel].maximumPos;
     }
 
-    function refreshCarousels(){
-        carousels.forEach(function(car, index){
+    function refreshCarousels() {
+        carousels.forEach(function (car, index) {
             setOffset(index, car.currentPos);
             selectDot(index, car.currentPos);
         });
@@ -163,32 +162,32 @@ const carouselHandler = (function(){
         let imgs = projects[carousel].querySelectorAll(".project-media img, .project-media video");
         let offset = pos * imgSize + "px";
 
-        imgs.forEach(function(pic){
+        imgs.forEach(function (pic) {
             pic.style.right = offset;
         });
     }
 
-    function selectDot(carousel, number){
+    function selectDot(carousel, number) {
         let dotGroups = document.querySelectorAll(".carousel-dots");
         let dots = dotGroups[carousel].querySelectorAll(".dot");
 
-        dots.forEach(function(dot){
+        dots.forEach(function (dot) {
             dot.classList.remove("dot-select");
         });
         dots[number].classList.add("dot-select");
     }
-    
+
     function getSlideCount(carouselIndex) {
         let projects = document.querySelectorAll(".focus-project");
         let dots = projects[carouselIndex].querySelectorAll(".dot");
         return dots.length;
     }
-       
+
     function swipeRight(carouselIndex) {
         let current = getPosition(carouselIndex);
         let max = getMaximum(carouselIndex);
 
-        if(current >= max - 1) {
+        if (current >= max - 1) {
             setPosition(carouselIndex, 0)
         } else {
             setPosition(carouselIndex, current += 1);
@@ -200,7 +199,7 @@ const carouselHandler = (function(){
         let current = getPosition(carouselIndex);
         let max = getMaximum(carouselIndex);
 
-        if(current <= 0) {
+        if (current <= 0) {
             setPosition(carouselIndex, max - 1);
         } else {
             setPosition(carouselIndex, current -= 1);

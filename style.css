@@ -8,7 +8,7 @@
     --fontSize: 12pt;
 
     --imgSize: calc(var(--contentWidth) * 3 / 7);
-    --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px); 
+    --tileSize: calc((var(--contentWidth) / 4) - var(--collectionGap) + 1px);
 }
 
 @font-face {
@@ -32,11 +32,11 @@ nav {
     margin-bottom: 20px;
 }
 
-nav ul{
-    
+nav ul {
+
     display: flex;
     justify-content: right;
-    
+
     list-style-type: none;
     gap: 10px;
 }
@@ -61,7 +61,7 @@ nav ul{
     width: var(--contentWidth);
     background-color: var(--bgColor);
     display: flex;
-    
+
     gap: 20px;
 
     border-radius: 2px;
@@ -101,7 +101,8 @@ nav ul{
     display: flex;
 }
 
-.project-media img, .project-media video{
+.project-media img,
+.project-media video {
     width: var(--imgSize);
     height: var(--imgSize);
     object-fit: cover;
@@ -202,7 +203,7 @@ nav ul{
     width: var(--tileSize);
     height: var(--tileSize);
     display: flex;
-    
+
     object-fit: contain;
 }
 
@@ -216,7 +217,7 @@ nav ul{
     box-sizing: border-box;
     object-fit: cover;
 
-    transition: border 200ms; 
+    transition: border 200ms;
     cursor: pointer;
 }
 
@@ -243,9 +244,9 @@ footer {
 @media screen and (orientation: portrait) {
 
     :root {
-    --contentWidth: calc(100vw / 10 * 9);
-    --imgSize: calc(var(--contentWidth) * 9 / 10);
-    --tileSize: calc((var(--contentWidth) / 2) - var(--collectionGap) + 2px);
+        --contentWidth: calc(100vw / 10 * 9);
+        --imgSize: calc(var(--contentWidth) * 9 / 10);
+        --tileSize: calc((var(--contentWidth) / 2) - var(--collectionGap) + 2px);
     }
 
     .focus-project {
@@ -267,14 +268,14 @@ footer {
 
 }
 
- /* width */
+/* width */
 ::-webkit-scrollbar {
-  width: 30px;
+    width: 30px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fff;
+    background: #fff;
     border-radius: 2px;
 }
 
@@ -284,11 +285,11 @@ footer {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #eee;
-  
+    background: #eee;
+
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--selectColor);
-} 
+    background: var(--selectColor);
+}
