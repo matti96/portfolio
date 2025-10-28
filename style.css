@@ -41,6 +41,13 @@ nav ul{
     gap: 10px;
 }
 
+#zoom-container>* {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    background-color: red;
+}
+
 
 #main-content {
     display: flex;
