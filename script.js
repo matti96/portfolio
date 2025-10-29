@@ -6,6 +6,11 @@ let tileSize;
 const zoomHandler = (function () {
     let media = document.querySelectorAll(".project-media > *");
 
+    let container = document.querySelector("#overlay");
+    container.addEventListener('click', function () {
+        container.style.display = "none";
+    });
+
     media.forEach(function (image) {
         image.addEventListener('click', function () {
             zoomImage(image);
