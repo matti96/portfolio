@@ -38,17 +38,14 @@ const scaleHandler = (function () {
         let contentEl = document.querySelector('.focus-project');
         let contentCss = window.getComputedStyle(contentEl, null);
         contentWidth = cleanValue(contentCss.getPropertyValue("width"));
-        //console.log(contentWidth);
 
         let mediaEl = document.querySelector('.project-media');
         let mediaCss = window.getComputedStyle(mediaEl, null);
         imgSize = cleanValue(mediaCss.getPropertyValue("width"));
-        //console.log(imgSize);
 
         let tileEl = document.querySelector('.project-tile');
         let tileCss = window.getComputedStyle(tileEl, null);
         tileSize = cleanValue(tileCss.getPropertyValue("width"));
-        //console.log(tileSize);
     }
 
     function cleanValue(str) {
