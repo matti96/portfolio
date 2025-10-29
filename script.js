@@ -13,7 +13,9 @@ const zoomHandler = (function () {
     })
 
     function zoomImage(image) {
-        let container = document.querySelector("#zoom-container");
+        let container = document.querySelector("#overlay");
+        container.style.display = "block";
+
         container.textContent = '';
         let copy = image.cloneNode(true);
         container.appendChild(copy);
