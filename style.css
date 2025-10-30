@@ -1,8 +1,8 @@
 :root {
     --dotSize: 12px;
-    --selectColor: #f66;
+    --selectColor: #bbb;
     --accentColor: #888;
-    --bgColor: #ddd;
+    --bgColor: #fff;
     --contentWidth: 900px;
     --collectionGap: 5px;
     --fontSize: 12pt;
@@ -141,8 +141,8 @@ nav ul {
 }
 
 .dot {
-    height: var(--dotSize);
     width: var(--dotSize);
+    aspect-ratio: 1 / 1;
     margin: 0px;
     padding: 0px;
     background-color: var(--bgColor);
