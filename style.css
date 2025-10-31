@@ -16,6 +16,21 @@
     src: url(font/Kanit-Regular.ttf);
 }
 
+@font-face {
+    font-family: lexend;
+    src: url(font/LexendExa-Medium.ttf);
+}
+
+@font-face {
+    font-family: zalando;
+    src: url(font/ZalandoSansExpanded-Black.ttf);
+}
+
+@font-face {
+    font-family: corben;
+    src: url(font/Corben-Regular.ttf);
+}
+
 * {
     margin: 0px;
     font-family: kanit;
