@@ -19,9 +19,10 @@ const zoomHandler = (function () {
 
     function zoomImage(image) {
         let container = document.querySelector("#overlay");
-        container.style.display = "block";
+        container.style.display = "flex";
 
-        container.textContent = '';
+        //container.textContent = '<button id="close-button">X</button>';
+        container.innerHTML = '<button id="close-button">X</button>'
         let copy = image.cloneNode(true);
         container.appendChild(copy);
     }
