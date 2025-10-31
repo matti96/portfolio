@@ -301,6 +301,35 @@ footer {
 
 }
 
+#overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+
+    display: none;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    object-fit: fill;
+
+}
+
+#overlay>* {
+    cursor: zoom-out;
+    max-width: 95%;
+    max-height: 95%;
+
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 30px;
