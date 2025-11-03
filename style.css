@@ -228,6 +228,8 @@ nav ul {
     height: var(--imgSize);
     box-sizing: border-box;
 
+    border: 2px solid black;
+
 }
 
 #project-collection {
@@ -303,7 +305,7 @@ footer {
     .project-text {
         width: var(--imgSize);
         margin-top: 0;
-        background-color: var(--accentColor);
+
     }
 
 
