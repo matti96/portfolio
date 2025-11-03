@@ -69,6 +69,8 @@ const tileHandler = (function () {
         img.draggable = false;
 
         tile.addEventListener('click', function () {
+            window.scrollTo(0, 0);
+
             highlightTile(index);
             focusHandler.setVisible(index);
         });
