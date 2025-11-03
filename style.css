@@ -32,6 +32,10 @@
     font-size: var(--fontSize);
 }
 
+body {
+    overflow-x: hidden;
+}
+
 h1,
 h2,
 h3 {
