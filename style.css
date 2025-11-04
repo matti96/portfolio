@@ -231,7 +231,6 @@ nav ul {
     box-sizing: border-box;
 
     border: 2px solid black;
-
 }
 
 #project-collection {
@@ -284,7 +283,25 @@ footer {
     font-family: zalando;
 }
 
+.button-container {
+    display: flex;
+    justify-content: left;
+}
 
+.project-text button {
+    background-color: rgb(255, 81, 0);
+    width: auto;
+
+    border-radius: calc(var(--radius) * 2);
+    text-decoration: none;
+    border: none;
+}
+
+.project-text button a {
+
+    font-family: zalando;
+    color: #fff;
+}
 
 @media screen and (orientation: portrait) {
 
