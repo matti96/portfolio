@@ -36,6 +36,9 @@
 
 body {
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1,
@@ -69,6 +72,7 @@ nav {
     align-items: center;
     background-color: var(--bgColor);
 
+    width: calc(var(--contentWidth) / 1);
     padding: 0px 10px;
     margin-bottom: 20px;
 }
