@@ -166,21 +166,25 @@ nav ul {
 }
 
 .carousel-dots {
-    margin: 10px;
+    margin: 10px 0;
     display: flex;
-    gap: 5px;
+    width: var(--imgSize);
 
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .dot {
-    width: var(--dotSize);
-    aspect-ratio: 1 / 1;
+    height: 5px;
+
+
+    flex-grow: 1;
+
     margin: 0px;
     padding: 0px;
-    background-color: var(--bgColor);
-    border-radius: 1px;
-    border: 1px solid #555;
+    background-color: #eee;
+
+    border: none;
     box-sizing: border-box;
     display: inline-block;
 
@@ -188,8 +192,9 @@ nav ul {
 }
 
 .dot-select {
-    background-color: #555;
-    background-color: var(--selectColor);
+    background-color: var(--accentColor);
+    background-color: #aaa;
+
 }
 
 .carousel-btn {
