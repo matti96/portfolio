@@ -14,23 +14,28 @@
 }
 
 @font-face {
-    font-family: zalando;
-    src: url(font/ZalandoSansExpanded-Black.ttf);
+    font-family: zalando-black;
+    src: url(font/zalandoSansExpanded-Black.ttf);
 }
 
 @font-face {
-    font-family: corben;
-    src: url(font/Corben-Regular.ttf);
+    font-family: zalando-light;
+    src: url(font/zalandoSansExpanded-Light.ttf);
 }
 
 @font-face {
-    font-family: noto;
-    src: url(font/NotoSans-Regular.ttf);
+    font-family: outfit-light;
+    src: url(font/Outfit-Light.ttf);
+}
+
+@font-face {
+    font-family: outfit-regular;
+    src: url(font/Outfit-Regular.ttf);
 }
 
 * {
     margin: 0px;
-    font-family: corben;
+    font-family: outfit-light;
     font-size: var(--fontSize);
 }
 
@@ -44,7 +49,7 @@ body {
 h1,
 h2,
 h3 {
-    font-family: zalando;
+    font-family: zalando-black;
     margin-bottom: 10pt;
 }
 
@@ -273,7 +278,7 @@ nav ul {
 }
 
 footer {
-    font-family: zalando;
+    font-family: zalando-light;
     background-color: var(--bgColor);
     width: 100vw;
     display: flex;
@@ -284,7 +289,7 @@ footer {
 }
 
 #copyright {
-    font-family: zalando;
+    font-family: zalando-light;
 }
 
 .button-container {
@@ -303,7 +308,7 @@ footer {
 
 .project-text button a {
 
-    font-family: zalando;
+    font-family: outfit-regular;
     color: #fff;
 }
 
