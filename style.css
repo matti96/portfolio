@@ -238,7 +238,6 @@ nav ul {
     background-color: white;
     border-radius: var(--radius);
     padding: 15px;
-    margin-bottom: 15px;
 
     height: var(--imgSize);
     box-sizing: border-box;
@@ -337,6 +336,7 @@ footer {
 
     .project-text {
         width: var(--imgSize);
+        height: 100%;
         margin-top: 0;
     }
 
