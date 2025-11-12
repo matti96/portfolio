@@ -358,22 +358,36 @@ footer {
 
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#overlay div {
+    width: 85%;
+    height: 85%;
+
+    display: flex;
+
 
     align-items: center;
     justify-content: center;
 
     object-fit: fill;
-
 }
 
-#overlay>* {
+#overlay div>*:not(#close-button) {
     cursor: zoom-out;
-    max-width: 92%;
-    max-height: 92%;
+    max-width: 100%;
+    max-height: 100%;
 
 }
 
 #close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+
     display: flex;
     aspect-ratio: 1 / 1;
     justify-content: center;
@@ -388,11 +402,11 @@ footer {
     border-radius: var(--radius);
 
     margin: 2%;
-    margin-left: 90%;
+    cursor: pointer;
 }
 
 #close-button img {
-    width: 5vw;
+    width: 100%;
 }
 
 /* width */

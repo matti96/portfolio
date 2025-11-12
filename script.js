@@ -6,22 +6,26 @@ let tileSize;
 const zoomHandler = (function () {
     let media = document.querySelectorAll(".project-media > *");
 
-    let container = document.querySelector("#overlay");
-    container.addEventListener('click', function () {
-        container.style.display = "none";
+    let overlay = document.querySelector("#overlay");
+    overlay.addEventListener('click', function () {
+        overlay.style.display = "none";
     });
 
     media.forEach(function (image) {
+        image.draggable = false;
         image.addEventListener('click', function () {
             zoomImage(image);
         });
     })
 
     function zoomImage(image) {
-        let container = document.querySelector("#overlay");
-        container.style.display = "flex";
+        let overlay = document.querySelector("#overlay");
+        overlay.style.display = "flex";
 
-        //container.textContent = '<button id="close-button">X</button>';
+        let container = document.querySelector("#overlay div");
+
+
+        //container.textContent = '';
         container.innerHTML = '<button id="close-button"><img src="img/cross.svg" alt="Close button"></button>'
         let copy = image.cloneNode(true);
         container.appendChild(copy);
