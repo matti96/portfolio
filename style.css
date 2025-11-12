@@ -207,11 +207,11 @@ nav ul {
     top: 0%;
     opacity: 20%;
     transition: opacity 100ms;
+    cursor: pointer;
 }
 
 .carousel-btn:hover {
     opacity: 100%;
-    cursor: pointer;
 }
 
 .carousel-previous {
