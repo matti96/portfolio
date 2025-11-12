@@ -22,7 +22,7 @@ const zoomHandler = (function () {
         container.style.display = "flex";
 
         //container.textContent = '<button id="close-button">X</button>';
-        container.innerHTML = '<button id="close-button">X</button>'
+        container.innerHTML = '<button id="close-button"><img src="img/cross.svg" alt="Close button"></button>'
         let copy = image.cloneNode(true);
         container.appendChild(copy);
     }
