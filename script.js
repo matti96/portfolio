@@ -6,10 +6,6 @@ let tileSize;
 const zoomHandler = (function () {
     let media = document.querySelectorAll(".project-media > *");
 
-
-
-
-
     media.forEach(function (image) {
         image.draggable = false;
         image.addEventListener('click', function () {
@@ -27,6 +23,7 @@ const zoomHandler = (function () {
         container.appendChild(copy);
 
         let closeBtn = document.querySelector("#close-button");
+        closeBtn.draggable = false;
         closeBtn.addEventListener('click', function () {
             overlay.style.display = "none";
         });
