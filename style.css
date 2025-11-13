@@ -2,7 +2,7 @@
     --selectColor: #bbb;
     --accentColor: #eee;
     --bgColor: #fff;
-    --contentWidth: 900px;
+    --contentWidth: 70vw;
     --collectionGap: 5px;
     --fontSize: 12pt;
 
@@ -77,7 +77,7 @@ nav {
     align-items: center;
     background-color: var(--bgColor);
 
-    width: calc(var(--contentWidth) / 1);
+    width: calc(var(--contentWidth));
     padding: 0px 10px;
     margin-top: 3pt;
     margin-bottom: 5pt;
