@@ -282,14 +282,17 @@ nav ul {
 }
 
 footer {
+    position: relative;
+    bottom: 1vh;
+    z-index: 2;
+
     font-family: zalando-light;
     background-color: var(--bgColor);
     width: 100vw;
     display: flex;
     justify-content: center;
 
-    bottom: 0;
-    z-index: 2;
+
 }
 
 #copyright {
