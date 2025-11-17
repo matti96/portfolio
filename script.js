@@ -2,7 +2,6 @@ let contentWidth;
 let imgSize;
 let tileSize;
 
-
 const zoomHandler = (function () {
     let media = document.querySelectorAll(".project-media > *");
 
