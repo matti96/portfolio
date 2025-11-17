@@ -381,6 +381,14 @@ footer {
 }
 
 @media screen and (orientation: portrait) {
+@media screen and (min-width: 1200px) {
+    :root {
+        --contentWidth: 100vh;
+        --fontSize: calc(var(--contentWidth)/50);
+    }
+}
+
+@media screen and (max-aspect-ratio: 4/5) {
 
     :root {
         --contentWidth: calc(100vw / 10 * 9);
