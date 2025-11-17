@@ -130,7 +130,9 @@ h3 {
 }
 
 p {
-    line-height: 1rem;
+    line-height: 1.3rem;
+    letter-spacing: 0.03rem;
+    margin: 1rem 0;
 }
 
 
@@ -347,19 +349,19 @@ nav ul {
 footer {
     position: relative;
     bottom: 1vh;
-    z-index: 2;
+    z-index: 0;
 
-    font-family: zalando-light;
+    font-family: outfit;
+    font-size: 0.8rem;
     background-color: var(--bgColor);
     width: 100vw;
     display: flex;
     justify-content: center;
-
-
 }
 
 #copyright {
-    font-family: zalando-light;
+    font-family: outfit;
+    font-size: 0.8rem;
 }
 
 .button-container {
@@ -378,7 +380,9 @@ footer {
 
 .project-text button a {
 
-    font-family: outfit-regular;
+    font-family: zalando-light;
+    font-size: calc(var(--fontSize) * 1.2);
+
     color: #fff;
 }
 
