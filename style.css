@@ -129,6 +129,14 @@ h3 {
     font-size: calc(var(--fontSize) * 1);
 }
 
+h4 {
+    color: #555;
+    font-family: zalando-light;
+    font-size: calc(var(--fontSize) * 0.8);
+    font-weight: normal;
+    margin-bottom: 1.5rem;
+}
+
 p {
     line-height: 1.3rem;
     letter-spacing: 0.03rem;
