@@ -2,9 +2,10 @@
     --selectColor: #bbb;
     --accentColor: #eee;
     --bgColor: #fff;
-    --contentWidth: 70vw;
+    --contentWidth: 75vw;
+    --maxWidth: 1200px;
     --collectionGap: 5px;
-    --fontSize: 12pt;
+    --fontSize: calc(var(--contentWidth)/40);
 
     --radius: 3px;
 
@@ -128,7 +129,7 @@ h3 {
 }
 
 p {
-    line-height: 18pt;
+    line-height: 1rem;
 }
 
 
@@ -271,7 +272,7 @@ nav ul {
 }
 
 .carousel-btn:hover {
-    opacity: 100%;
+    opacity: 70%;
 }
 
 .carousel-previous {
