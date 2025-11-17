@@ -33,6 +33,7 @@
     src: url(font/Outfit-Regular.ttf);
 }
 
+
 * {
     margin: 0px;
     font-family: outfit-light;
@@ -381,7 +382,6 @@ footer {
     color: #fff;
 }
 
-@media screen and (orientation: portrait) {
 @media screen and (min-width: 1200px) {
     :root {
         --contentWidth: 100vh;
@@ -395,6 +395,7 @@ footer {
         --contentWidth: calc(100vw / 10 * 9);
         --imgSize: calc(var(--contentWidth) * 9 / 10);
         --tileSize: calc((var(--contentWidth) / 2) - var(--collectionGap) + 2px);
+        --fontSize: calc(var(--contentWidth)/20);
     }
 
     .focus-project {
