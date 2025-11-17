@@ -389,6 +389,13 @@ footer {
     }
 }
 
+@media screen and (min-width: 1200px) and (max-height: 800px) {
+    :root {
+        --contentWidth: 800px;
+        --fontSize: calc(var(--contentWidth)/50);
+    }
+}
+
 @media screen and (max-aspect-ratio: 4/5) {
 
     :root {
