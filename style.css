@@ -15,22 +15,22 @@
 
 @font-face {
     font-family: zalando-black;
-    src: url(font/zalandoSansExpanded-Black.ttf);
+    src: url(./font/zalandoSansExpanded-Black.ttf);
 }
 
 @font-face {
     font-family: zalando-light;
-    src: url(font/zalandoSansExpanded-Light.ttf);
+    src: url(./font/zalandoSansExpanded-Light.ttf);
 }
 
 @font-face {
     font-family: outfit-light;
-    src: url(font/Outfit-Light.ttf);
+    src: url(./font/Outfit-Light.ttf);
 }
 
 @font-face {
     font-family: outfit-regular;
-    src: url(font/Outfit-Regular.ttf);
+    src: url(./font/Outfit-Regular.ttf);
 }
 
 
