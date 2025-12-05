@@ -79,7 +79,6 @@ body {
 }
 
 #overlay div>*:not(#close-button) {
-    cursor: zoom-out;
     max-width: 100%;
     max-height: 100%;
 }
