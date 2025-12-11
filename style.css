@@ -124,8 +124,10 @@ h2 {
 }
 
 h3 {
+    text-align: right;
     font-size: calc(var(--fontSize) * 1);
 }
+
 
 h4 {
     color: #555;
@@ -142,8 +144,6 @@ p {
     margin: 1rem 0;
 }
 
-
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -152,7 +152,7 @@ nav {
 
     width: calc(var(--contentWidth));
     padding: 0px 10px;
-    margin-top: 3pt;
+    margin-top: 5pt;
     margin-bottom: 5pt;
 }
 
@@ -162,6 +162,13 @@ nav ul {
 
     list-style-type: none;
     gap: 10px;
+}
+
+hr {
+    height: 1.5px;
+    width: 100%;
+    background-color: black;
+    margin-bottom: 15pt;
 }
 
 #zoom-container>* {
